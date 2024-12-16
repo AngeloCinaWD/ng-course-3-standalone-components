@@ -1,0 +1,35 @@
+<div class="top-menu">
+  <img
+    class="logo"
+    src="https://angular-academy.s3.amazonaws.com/main-logo/main-page-logo-small-hat.png"
+  />
+</div>
+
+<button (click)="editCategory()" i18n>Edit category</button>
+
+<h4
+  i18n="
+    Welcome message | Greet the user a greeting at the beginning of the
+    course@@welcomeMessage"
+>
+  Welcome to the angular core deep dive course
+</h4>
+
+<div i18n>
+  { coursesTotal, plural, =0 {No courses available.} =1 {One course is
+  available.} other {A total of {{ coursesTotal }} courses are available} }
+</div>
+
+<div>
+  <h1>Corsi tramite variabile coursesDaFile ed alias courses</h1>
+  <div class="courses" *ngIf="coursesDaFile as courses">
+    <course-card
+      [highlighted]
+      *ngFor="let course of courses"
+      [course]="course"
+      (courseChanged)="onCourseChanged($event)"
+    >
+      <course-image [src]="course.iconUrl"></course-image>
+    </course-card>
+  </div>
+</div>
