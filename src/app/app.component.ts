@@ -17,6 +17,9 @@ import { Observable } from "rxjs";
 import { HttpClient, HttpParams } from "@angular/common/http";
 import { CoursesService } from "./courses/courses.service";
 import { APP_CONFIG, AppConfig, CONFIG_TOKEN } from "./configurazioniApp";
+import { CourseCardComponent } from "./courses/course-card/course-card.component";
+import { CourseImageComponent } from "./courses/course-image/course-image.component";
+import { NgFor, NgIf } from "@angular/common";
 
 function coursesServiceProvider(http: HttpClient): CoursesService {
   return new CoursesService(http);
@@ -29,6 +32,8 @@ export const COURSES_SERVICE = new InjectionToken<CoursesService>(
   selector: "app-root",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
+  standalone: true,
+  imports: [CourseCardComponent, CourseImageComponent, NgIf, NgFor],
 })
 export class AppComponent implements OnInit {
   coursesDaFile: Course[] = COURSES;

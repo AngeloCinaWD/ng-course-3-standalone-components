@@ -7,21 +7,23 @@ import { NgxUnlessDirective } from "./directives/ngx-unless.directive";
 import { CoursesService } from "./courses.service";
 import { FilterByCategoryPipe } from "./filter-by-category.pipe";
 
+// tutto quello che è dichiarato standalone va tolto dal file .module
+// nelle declarations e negli exports
 @NgModule({
   declarations: [
-    CourseCardComponent,
-    CourseImageComponent,
-    HighlightedDirective,
-    NgxUnlessDirective,
-    FilterByCategoryPipe,
+    // CourseCardComponent,
+    // CourseImageComponent,
+    // HighlightedDirective,
+    // NgxUnlessDirective,
+    // FilterByCategoryPipe,
   ],
   imports: [CommonModule],
   exports: [
-    CourseCardComponent,
-    CourseImageComponent,
-    HighlightedDirective,
-    NgxUnlessDirective,
-    FilterByCategoryPipe,
+    // CourseCardComponent,
+    // CourseImageComponent,
+    // HighlightedDirective,
+    // NgxUnlessDirective,
+    // FilterByCategoryPipe,
   ],
   providers: [CoursesService],
 })
