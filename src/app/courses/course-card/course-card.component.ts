@@ -19,6 +19,8 @@ import { NgIf, NgSwitch } from "@angular/common";
 
 // nei componenti standalone vanno importate, in ognuno, tutte le direttive e le dipendenze che il componente utilizza
 // ad esempio ngIf ong Switch utilizzate nel template
+// per migrare un'app da componenti non standalone a componenti standalone posso runnare il comando ng generate @angular/core:standalone
+// un componente standalone DEVE contenere tutte le dependencies che utilizza sia nel template che nel model
 @Component({
   selector: "course-card",
   templateUrl: "./course-card.component.html",

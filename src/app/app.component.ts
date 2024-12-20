@@ -33,7 +33,7 @@ export const COURSES_SERVICE = new InjectionToken<CoursesService>(
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.css"],
   standalone: true,
-  imports: [CourseCardComponent, CourseImageComponent, NgIf, NgFor],
+  imports: [CourseCardComponent, CourseImageComponent, NgFor, NgIf],
 })
 export class AppComponent implements OnInit {
   coursesDaFile: Course[] = COURSES;
