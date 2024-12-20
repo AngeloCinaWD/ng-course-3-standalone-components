@@ -17,7 +17,9 @@ import { FilterByCategoryPipe } from "./filter-by-category.pipe";
     // NgxUnlessDirective,
     // FilterByCategoryPipe,
   ],
-  imports: [CommonModule],
+  // posso rimuovere anche questo CommonModule perchè tutte le direttive di cui hanno bisogno i componenti sono importate direttamente nei componenti stessi
+  // imports: [CommonModule],
+  imports: [],
   exports: [
     // CourseCardComponent,
     // CourseImageComponent,
@@ -25,6 +27,7 @@ import { FilterByCategoryPipe } from "./filter-by-category.pipe";
     // NgxUnlessDirective,
     // FilterByCategoryPipe,
   ],
-  providers: [CoursesService],
+  // providers: [CoursesService],
+  providers: [],
 })
 export class CoursesModule {}

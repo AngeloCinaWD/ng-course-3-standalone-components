@@ -12,9 +12,9 @@ import { CoursesModule } from "./courses/courses.module";
 @NgModule({
   // declarations: [AppComponent],
   declarations: [],
-  // bootstrap: [AppComponent],
-  bootstrap: [],
-  imports: [BrowserModule, BrowserAnimationsModule, CoursesModule],
+  bootstrap: [AppComponent],
+  // imports: [BrowserModule, BrowserAnimationsModule, CoursesModule],
+  imports: [BrowserModule, BrowserAnimationsModule],
   providers: [provideHttpClient(withInterceptorsFromDi())],
 })
 export class AppModule {}

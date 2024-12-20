@@ -3,10 +3,10 @@ import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Course } from "../model/course";
 
-@Injectable()
-//   {
-//   providedIn: "root",
-// }
+// per rimuovere un service dal file .module e renderlo disponibile in tutta l'app aggiungiamo la proprietà providedIn: "root"
+@Injectable({
+  providedIn: "root",
+})
 export class CoursesService {
   constructor(private http: HttpClient) {}
 
